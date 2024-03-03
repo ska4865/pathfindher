@@ -42,7 +42,8 @@ export class MapContainer extends Component {
 
   handleReport () {
     // print to console for now
-    console.log('Reporting at: ', this.state.userLocation);
+    // console.log('Reporting at: ', this.state.userLocation);
+    alert('Report button clicked!');
 
     // ideally this would send a req to and endpoint that we
     // create on AWS API Gateway which would map to an AWS Lambda 
