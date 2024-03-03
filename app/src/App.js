@@ -42,6 +42,7 @@ export class MapContainer extends Component {
 
   handleReport () {
     // print to console for now
+    console.log('Reporting at: ', this.state.userLocation);
 
     // ideally this would send a req to and endpoint that we
     // create on AWS API Gateway which would map to an AWS Lambda 
@@ -76,7 +77,7 @@ export class MapContainer extends Component {
 
         {/**Conditionally render the incident reporting button */}
         {userLocation && (
-          <button onClick={this.handleReport}>Create Report</button>
+          <button className="reportButton" onClick={this.handleReport}>Create Report</button>
         )}
       </div>
     );
