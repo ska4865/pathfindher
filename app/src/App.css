@@ -33,6 +33,7 @@
   bottom: 10px;
   left: 10px;
   z-index: 1000;
+  background-color: #ffcc00;
 }
 
 @keyframes App-logo-spin {

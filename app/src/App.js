@@ -77,7 +77,7 @@ export class MapContainer extends Component {
 
         {/**Conditionally render the incident reporting button */}
         {userLocation && (
-          <button className="reportButton" onClick={this.handleReport}>Create Report</button>
+          <button className="reportButton" onClick={this.handleReport}>Create Report [ ! ]</button>
         )}
       </div>
     );
