@@ -3,4 +3,5 @@ To set up our project:
 - Create a template project with the command `npm create-react-app app`
 - Move into the app directory: `cd app`
 - Run the app locally using `npm start`
+- We connected our react app to AWS services through ([Amplify React App](https://aws.amazon.com/getting-started/hands-on/build-react-app-amplify-graphql/module-two/?e=gs2020&p=build-a-react-app-one))
 
