@@ -19,21 +19,36 @@ export class MapContainer extends Component {
     }
   }
 
-
   render() {
-    return (
-      <Map
-        google={this.props.google}
-        zoom={14}
-        style={mapStyles}
-        initialCenter={
-          {
-            lat: -1.2884,
-            lng: 36.8233
+    // make a reference to the user's
+    // location as saved in the component
+    const { userLocation } = this.state;
+
+    if (userLocation) {
+      return (
+        <Map
+          google={this.props.google}
+          zoom={14}
+          style={mapStyles}
+          initialCenter={
+            {
+              lat: -1.2884,
+              lng: 36.8233
+            }
           }
-        }
-      />
-    );
+          center={userLocation} // use the location to center the map
+        >
+          {/*Render the Marker component only when if userLocation is not null*/}
+          {userLocation && <Marker position={userLocation} />}
+          {!userLocation && <Marker position={userLocation} />}
+        </Map>
+      );
+    }
+    else {
+      return (
+        <div>ohr nohr</div>
+      );
+    }
   }
 }
 
