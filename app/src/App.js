@@ -1,6 +1,6 @@
 import './App.css';
 import React, {Component} from 'react';
-import {Map, GoogleApiWrapper } from 'google-maps-react';
+import {Map, GoogleApiWrapper, Marker} from 'google-maps-react';
 
 const mapStyles = {
   width: '100%',
@@ -8,7 +8,18 @@ const mapStyles = {
 }
 
 export class MapContainer extends Component {
-  
+  constructor(props) {
+    // we need to init the superclass's properties in
+    // order to access and init this class's props
+    super(props);
+
+    // and now we can init state for this class specifically
+    this.state = {
+      userLocation: null
+    }
+  }
+
+
   render() {
     return (
       <Map
